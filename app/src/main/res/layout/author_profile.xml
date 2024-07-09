@@ -16,79 +16,91 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="251dp"
-            android:layout_height="156dp"
-            android:layout_marginTop="4dp"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.37"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ngugi" />
 
         <TextView
             android:id="@+id/txTitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="177dp"
+            android:layout_height="19dp"
             android:layout_marginTop="12dp"
-            tools:text="I will marry when I want"
             app:layout_constraintEnd_toEndOf="@+id/tvName"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvName"
-            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            tools:text="I will marry when I want" />
 
         <TextView
             android:id="@+id/tvPublish"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            tools:text="Publishing date"
             app:layout_constraintEnd_toEndOf="@+id/txTitle"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/txTitle"
-            app:layout_constraintTop_toBottomOf="@+id/txTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/txTitle"
+            tools:text="Publishing date" />
 
         <TextView
             android:id="@+id/tvArticlePreview"
-            android:layout_width="415dp"
-            android:layout_height="163dp"
+            android:layout_width="368dp"
+            android:layout_height="213dp"
             android:layout_marginTop="8dp"
-            tools:text=" Another theme is identity and belonging. Trevor Noah explores his mixed-race heritage and the challenges he faced in a society .He reflects on his struggles to find his place and identity in a divided society and the importance of embracing one's true self.   Humor and resilience are also prominent themes. Despite the hardships he faced, Trevor Noah uses humor as a coping mechanism. He shares funny anecdotes and stories that demonstrate his resilience and ability to find joy even in difficult circumstances. It's a powerful memoir that sheds light on important social issues while also providing moments of laughter and inspiration.  "
             app:layout_constraintEnd_toEndOf="@+id/tvPublish"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.387"
             app:layout_constraintStart_toStartOf="@+id/tvPublish"
-            app:layout_constraintTop_toBottomOf="@+id/tvPublish" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPublish"
+            tools:text=" Another theme is identity and belonging. Trevor Noah explores his mixed-race heritage and the challenges he faced in a society .He reflects on his struggles to find his place and identity in a divided society and the importance of embracing one's true self.   Humor and resilience are also prominent themes. Despite the hardships he faced, Trevor Noah uses humor as a coping mechanism. He shares funny anecdotes and stories that demonstrate his resilience and ability to find joy even in difficult circumstances. It's a powerful memoir that sheds light on important social issues while also providing moments of laughter and inspiration.  " />
 
         <TextView
             android:id="@+id/tvLink"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            tools:text="https://images.app.goo.gl/LfrgBV5DTVvga46h9"
+            android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="@+id/tvArticlePreview"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvArticlePreview"
-            app:layout_constraintTop_toBottomOf="@+id/tvArticlePreview" />
+            app:layout_constraintTop_toBottomOf="@+id/tvArticlePreview"
+            tools:text="https://images.app.goo.gl/LfrgBV5DTVvga46h9" />
 
         <TextView
             android:id="@+id/tvName"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            tools:text="Ngugi Wa Thiongo"
+            android:layout_width="147dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.405"
             app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:text="    Ngugi Wa Thiongo" />
 
         <ImageView
             android:id="@+id/imgArticlePhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_width="119dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.969"
+            app:layout_constraintHorizontal_bias="0.938"
             app:layout_constraintStart_toStartOf="@+id/tvLink"
             app:layout_constraintTop_toBottomOf="@+id/tvLink"
             app:srcCompat="@drawable/book_title" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:text="See More"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/imgArticlePhoto"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imgArticlePhoto"
+            app:layout_constraintTop_toBottomOf="@+id/imgArticlePhoto" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
