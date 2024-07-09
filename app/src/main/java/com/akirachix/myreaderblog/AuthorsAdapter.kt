@@ -6,32 +6,37 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBindings
+import com.akirachix.myreaderblog.databinding.AuthorProfileBinding
+import com.squareup.picasso.Picasso
 
 class AuthorsAdapter (var authourList:List<Authors>):RecyclerView.Adapter<AuthorViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AuthorViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.author_profile, parent, false)
-        return AuthorViewHolder(itemView)
+        val binding = AuthorProfileBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return AuthorViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: AuthorViewHolder, position: Int) {
         val author=authourList[position]
-        holder.tvName.text=author.name
-        holder.tvLink.text=author.link
-        holder.tvPublish.text=author.publisherDate
-        holder.tvTitle.text=author.title
-        holder.tvArticlePreview.text=author.articlePreview
+        holder.binding.tvName.text=author.name
+        holder.binding.tvLink.text=author.link
+        holder.binding.tvPublish.text=author.publisherDate
+        holder.binding.txTitle.text=author.title
+        holder.binding.tvArticlePreview.text=author.articlePreview
+      Picasso.get()
+          .load(author.articlePhoto)
+          .placeholder(R.drawable.ngugi)
+          .into(holder.binding.imgArticlePhoto)
+
     }
 
     override fun getItemCount(): Int {
         return authourList.size
     }
 }
-class AuthorViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-var tvName=itemView.findViewById<TextView>(R.id.tvName)
-    var tvTitle=itemView.findViewById<TextView>(R.id.txTitle)
-    var tvPublish=itemView.findViewById<TextView>(R.id.tvPublish)
-    var tvArticlePreview=itemView.findViewById<TextView>(R.id.tvArticlePreview)
-    var tvLink=itemView.findViewById<TextView>(R.id.tvLink)
+class AuthorViewHolder(var binding:AuthorProfileBinding):RecyclerView.ViewHolder(binding.root){
+
 }
+        
